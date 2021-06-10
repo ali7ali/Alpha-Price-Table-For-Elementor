@@ -20,7 +20,7 @@ final class Alpha_Pricetable_For_Elementor {
     }
 
     public function i18n() {
-        load_plugin_textdomain( 'alpha-pricetable-for-elementor' );
+        load_plugin_textdomain( 'alpha-price-table-for-elementor' );
 
     }
 
@@ -84,16 +84,16 @@ final class Alpha_Pricetable_For_Elementor {
             }
             $activation_url = wp_nonce_url( 'plugins.php?action=activate&amp;plugin=' . $elementor . '&amp;plugin_status=all&amp;paged=1&amp;s', 'activate-plugin_' . $elementor );
             /* translators: 1: Just text decoration 2: Just text decoration */
-            $message = sprintf( __( '%1$sAlpha Price Table for Elementor%2$s requires %1$s"Elementor"%2$s plugin to be active. Please activate Elementor to continue.', 'alpha-pricetable-for-elementor' ), '<strong>', '</strong>' );
-            $button_text = esc_html__( 'Activate Elementor', 'alpha-pricetable-for-elementor' );
+            $message = sprintf( __( '%1$sAlpha Price Table for Elementor%2$s requires %1$s"Elementor"%2$s plugin to be active. Please activate Elementor to continue.', 'alpha-price-table-for-elementor' ), '<strong>', '</strong>' );
+            $button_text = esc_html__( 'Activate Elementor', 'alpha-price-table-for-elementor' );
         } else {
             if( ! current_user_can( 'activate_plugins' ) ) {
                 return;
             }
             $activation_url = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
             /* translators: 1: Just text decoration 2: Just text decoration */
-            $message = sprintf( __( '%1$sAlpha Price Table for Elementor%2$s requires %1$s"Elementor"%2$s plugin to be installed and activated. Please install Elementor to continue.', 'alpha-pricetable-for-elementor' ), '<strong>', '</strong>' );
-            $button_text = esc_html__( 'Install Elementor', 'alpha-pricetable-for-elementor' );
+            $message = sprintf( __( '%1$sAlpha Price Table for Elementor%2$s requires %1$s"Elementor"%2$s plugin to be installed and activated. Please install Elementor to continue.', 'alpha-price-table-for-elementor' ), '<strong>', '</strong>' );
+            $button_text = esc_html__( 'Install Elementor', 'alpha-price-table-for-elementor' );
         }
         $button = '<p><a href="' . $activation_url . '" class="button-primary">' . $button_text . '</a></p>';
         printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p>%2$s</div>', $message, $button );
@@ -107,9 +107,9 @@ final class Alpha_Pricetable_For_Elementor {
 
         $message = sprintf(
             /* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-            esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'alpha-pricetable-for-elementor' ),
-            '<strong>' . esc_html__( 'Alpha Price Table for Elementor', 'alpha-pricetable-for-elementor' ) . '</strong>',
-            '<strong>' . esc_html__( 'Elementor', 'alpha-pricetable-for-elementor' ) . '</strong>',
+            esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'alpha-price-table-for-elementor' ),
+            '<strong>' . esc_html__( 'Alpha Price Table for Elementor', 'alpha-price-table-for-elementor' ) . '</strong>',
+            '<strong>' . esc_html__( 'Elementor', 'alpha-price-table-for-elementor' ) . '</strong>',
              self::MINIMUM_ELEMENTOR_VERSION
         );
 
@@ -123,8 +123,8 @@ final class Alpha_Pricetable_For_Elementor {
 
         $message = sprintf(
             /* translators: 1: Plugin name 2: Required PHP version */
-            esc_html__( '"%1$s" requires PHP version %2$s or greater.', 'alpha-pricetable-for-elementor' ),
-            '<strong>' . esc_html__( 'Alpha Price Table', 'alpha-pricetable-for-elementor' ) . '</strong>',
+            esc_html__( '"%1$s" requires PHP version %2$s or greater.', 'alpha-price-table-for-elementor' ),
+            '<strong>' . esc_html__( 'Alpha Price Table', 'alpha-price-table-for-elementor' ) . '</strong>',
              self::MINIMUM_PHP_VERSION
         );
 

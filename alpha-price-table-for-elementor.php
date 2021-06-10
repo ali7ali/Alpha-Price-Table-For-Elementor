@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Alpha Price Table For Elementor
- * Description: Premium Price Table for wordpress.
+ * Description: Premium Price Table for WordPress.
  * Author:      Ali Ali
  * Author URI:  https://github.com/Ali-A-Ali
  * Version:     1.0.0
- * Text Domain: alpha-pricetable-for-elementor
+ * Text Domain: alpha-price-table-for-elementor
  * License: GPLv3
 */
 

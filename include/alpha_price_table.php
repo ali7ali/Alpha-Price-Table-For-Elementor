@@ -18,7 +18,7 @@ class Alpha_Price_Table extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Alpha Price Table', 'alpha-pricetable-for-elementor' );
+		return __( 'Alpha Price Table', 'alpha-price-table-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -33,36 +33,36 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_header',
 			[
-				'label' => __( 'Header', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Header', 'alpha-price-table-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'heading',
 			[
-				'label' => __( 'Title', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Title', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Enter your title', 'alpha-pricetable-for-elementor' ),
+				'default' => __( 'Enter your title', 'alpha-price-table-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'heading_alignment',
 			[
-				'label' => __( 'Alignment', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Alignment', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::CHOOSE,
 				'label_block' => false,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'alpha-pricetable-for-elementor' ),
+						'title' => __( 'Left', 'alpha-price-table-for-elementor' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'alpha-pricetable-for-elementor' ),
+						'title' => __( 'Center', 'alpha-price-table-for-elementor' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'alpha-pricetable-for-elementor' ),
+						'title' => __( 'Right', 'alpha-price-table-for-elementor' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -75,16 +75,16 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'sub_heading',
 			[
-				'label' => __( 'Description', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Description', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Enter your description', 'alpha-pricetable-for-elementor' ),
+				'default' => __( 'Enter your description', 'alpha-price-table-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'heading_tag',
 			[
-				'label' => __( 'Heading Tag', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Heading Tag', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h2' => 'H2',
@@ -102,7 +102,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_features',
 			[
-				'label' => __( 'Features', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Features', 'alpha-price-table-for-elementor' ),
 			]
 		);
 
@@ -111,9 +111,9 @@ class Alpha_Price_Table extends Widget_Base {
 		$repeater->add_control(
 			'item_text',
 			[
-				'label' => __( 'Text', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Text', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'List Item', 'alpha-pricetable-for-elementor' ),
+				'default' => __( 'List Item', 'alpha-price-table-for-elementor' ),
 			]
 		);
 
@@ -125,7 +125,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$repeater->add_control(
 			'selected_item_icon',
 			[
-				'label' => __( 'Icon', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Icon', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'item_icon',
 				'default' => $default_icon,
@@ -135,7 +135,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$repeater->add_control(
 			'item_icon_color',
 			[
-				'label' => __( 'Icon Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Icon Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}} i' => 'color: {{VALUE}}',
@@ -147,12 +147,12 @@ class Alpha_Price_Table extends Widget_Base {
 		$repeater->add_control(
 			'item_icon_position',
 			[
-				'label' => __( 'Icon Position', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Icon Position', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'before',
 				'options' => [
-					'before' => __( 'Before', 'alpha-pricetable-for-elementor' ),
-					'after' => __( 'After', 'alpha-pricetable-for-elementor' ),
+					'before' => __( 'Before', 'alpha-price-table-for-elementor' ),
+					'after' => __( 'After', 'alpha-price-table-for-elementor' ),
 				],
 				'condition' => [
 					'selected_item_icon[value]!' => '',
@@ -167,17 +167,17 @@ class Alpha_Price_Table extends Widget_Base {
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'item_text' => __( 'List Item #1', 'alpha-pricetable-for-elementor' ),
+						'item_text' => __( 'List Item #1', 'alpha-price-table-for-elementor' ),
 						'selected_item_icon' => $default_icon,
 						'item_icon_position' => 'before',
 					],
 					[
-						'item_text' => __( 'List Item #2', 'alpha-pricetable-for-elementor' ),
+						'item_text' => __( 'List Item #2', 'alpha-price-table-for-elementor' ),
 						'selected_item_icon' => $default_icon,
 						'item_icon_position' => 'before',
 					],
 					[
-						'item_text' => __( 'List Item #3', 'alpha-pricetable-for-elementor' ),
+						'item_text' => __( 'List Item #3', 'alpha-price-table-for-elementor' ),
 						'selected_item_icon' => $default_icon,
 						'item_icon_position' => 'before',
 					],
@@ -191,25 +191,25 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_footer',
 			[
-				'label' => __( 'Footer', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Footer', 'alpha-price-table-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'button_text',
 			[
-				'label' => __( 'Button Text', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Button Text', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Click Here', 'alpha-pricetable-for-elementor' ),
+				'default' => __( 'Click Here', 'alpha-price-table-for-elementor' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Link', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'alpha-pricetable-for-elementor' ),
+				'placeholder' => __( 'https://your-link.com', 'alpha-price-table-for-elementor' ),
 				'default' => [
 					'url' => '#',
 				],
@@ -224,7 +224,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_header_style',
 			[
-				'label' => __( 'Header', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Header', 'alpha-price-table-for-elementor' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			]
@@ -233,7 +233,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'header_bg_color',
 			[
-				'label' => __( 'Background Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Background Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Color::get_type(),
@@ -248,7 +248,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'header_padding',
 			[
-				'label' => __( 'Padding', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Padding', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -260,7 +260,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_heading_style',
 			[
-				'label' => __( 'Title', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Title', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -269,7 +269,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_color',
 			[
-				'label' => __( 'Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__heading' => 'color: {{VALUE}}',
@@ -289,7 +289,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_sub_heading_style',
 			[
-				'label' => __( 'Sub Title', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Sub Title', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -298,7 +298,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'sub_heading_color',
 			[
-				'label' => __( 'Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__subheading' => 'color: {{VALUE}}',
@@ -320,7 +320,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_features_list_style',
 			[
-				'label' => __( 'Features', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Features', 'alpha-price-table-for-elementor' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			]
@@ -329,7 +329,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'features_list_bg_color',
 			[
-				'label' => __( 'Background Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Background Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'separator' => 'before',
 				'selectors' => [
@@ -341,7 +341,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'features_list_padding',
 			[
-				'label' => __( 'Padding', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Padding', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -353,7 +353,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'features_list_color',
 			[
-				'label' => __( 'Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Color::get_type(),
@@ -378,7 +378,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'item_width',
 			[
-				'label' => __( 'Width', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Width', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'%' => [
@@ -397,7 +397,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'section_footer_style',
 			[
-				'label' => __( 'Footer', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Footer', 'alpha-price-table-for-elementor' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			]
@@ -406,7 +406,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'footer_bg_color',
 			[
-				'label' => __( 'Background Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Background Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__footer' => 'background-color: {{VALUE}}',
@@ -417,7 +417,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'footer_padding',
 			[
-				'label' => __( 'Padding', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Padding', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -429,7 +429,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'heading_footer_button',
 			[
-				'label' => __( 'Button', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Button', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -441,15 +441,15 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'button_size',
 			[
-				'label' => __( 'Size', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Size', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'md',
 				'options' => [
-					'xs' => __( 'Extra Small', 'alpha-pricetable-for-elementor' ),
-					'sm' => __( 'Small', 'alpha-pricetable-for-elementor' ),
-					'md' => __( 'Medium', 'alpha-pricetable-for-elementor' ),
-					'lg' => __( 'Large', 'alpha-pricetable-for-elementor' ),
-					'xl' => __( 'Extra Large', 'alpha-pricetable-for-elementor' ),
+					'xs' => __( 'Extra Small', 'alpha-price-table-for-elementor' ),
+					'sm' => __( 'Small', 'alpha-price-table-for-elementor' ),
+					'md' => __( 'Medium', 'alpha-price-table-for-elementor' ),
+					'lg' => __( 'Large', 'alpha-price-table-for-elementor' ),
+					'xl' => __( 'Extra Large', 'alpha-price-table-for-elementor' ),
 				],
 				'condition' => [
 					'button_text!' => '',
@@ -462,7 +462,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Normal', 'alpha-price-table-for-elementor' ),
 				'condition' => [
 					'button_text!' => '',
 				],
@@ -472,7 +472,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_text_color',
 			[
-				'label' => __( 'Text Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Text Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -499,7 +499,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_background_color',
 			[
-				'label' => __( 'Background Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Background Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => [
 					'type' => Color::get_type(),
@@ -528,7 +528,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'button_border_radius',
 			[
-				'label' => __( 'Border Radius', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Border Radius', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -543,7 +543,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_responsive_control(
 			'button_text_padding',
 			[
-				'label' => __( 'Text Padding', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Text Padding', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -560,7 +560,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Hover', 'alpha-price-table-for-elementor' ),
 				'condition' => [
 					'button_text!' => '',
 				],
@@ -570,7 +570,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_hover_color',
 			[
-				'label' => __( 'Text Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Text Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__button:hover' => 'color: {{VALUE}};',
@@ -584,7 +584,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_background_hover_color',
 			[
-				'label' => __( 'Background Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Background Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__button:hover' => 'background-color: {{VALUE}};',
@@ -598,7 +598,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_hover_border_color',
 			[
-				'label' => __( 'Border Color', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Border Color', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-price-table__button:hover' => 'border-color: {{VALUE}};',
@@ -612,7 +612,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'button_hover_animation',
 			[
-				'label' => __( 'Animation', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Animation', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::HOVER_ANIMATION,
 				'condition' => [
 					'button_text!' => '',
@@ -629,7 +629,7 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->start_controls_section(
 			'alpha_pricetable',
 			[
-				'label' => __( 'Table', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Table', 'alpha-price-table-for-elementor' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			]
@@ -638,12 +638,12 @@ class Alpha_Price_Table extends Widget_Base {
 		$this->add_control(
 			'alpha_pricetable_overflow',
 			[
-				'label' => __( 'Overflow', 'alpha-pricetable-for-elementor' ),
+				'label' => __( 'Overflow', 'alpha-price-table-for-elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'hidden',
 				'options' => [
-					'hidden' => __( 'Hidden', 'alpha-pricetable-for-elementor' ),
-					'visible' => __( 'Visible', 'alpha-pricetable-for-elementor' ),
+					'hidden' => __( 'Hidden', 'alpha-price-table-for-elementor' ),
+					'visible' => __( 'Visible', 'alpha-price-table-for-elementor' ),
 				],
 				'selectors' => [
 					'{{WRAPPER}}' => 'overflow: {{VALUE}}',
