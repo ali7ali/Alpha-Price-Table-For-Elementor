@@ -3,8 +3,8 @@
  * Plugin Name: Alpha Price Table For Elementor
  * Description: Premium Price Table for WordPress.
  * Author:      Ali Ali
- * Author URI:  https://github.com/Ali-A-Ali
- * Version:     1.0.0
+ * Author URI:  https://github.com/Ali7Ali
+ * Version:     1.0.1
  * Text Domain: alpha-price-table-for-elementor
  * License: GPLv3
  * 
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'ALPHAPRICETABLE_VERSION', '1.2.3' );
+define( 'ALPHAPRICETABLE_VERSION', '1.0.1' );
 define( 'ALPHAPRICETABLE_ADDONS_PL_ROOT', __FILE__ );
 define( 'ALPHAPRICETABLE_PL_URL', plugins_url( '/', ALPHAPRICETABLE_ADDONS_PL_ROOT ) );
 define( 'ALPHAPRICETABLE_PL_PATH', plugin_dir_path( ALPHAPRICETABLE_ADDONS_PL_ROOT ) );
