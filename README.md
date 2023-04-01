@@ -19,7 +19,7 @@ Tags: price-table, drag-and-drop, elementor, page builder, landing page, premium
 
 Requires at least: 5.0
 
-Tested up to: 6.2
+Tested up to: 6.1.1
 
 Requires PHP: 5.6
 
