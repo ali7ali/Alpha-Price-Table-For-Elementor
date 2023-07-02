@@ -2,17 +2,16 @@
 
 /**
  * Plugin Name: Alpha Price Table For Elementor
+ * Plugin URI: https://alphatrio.net
  * Description: Premium Price Table for WordPress.
  * Author:      Ali Ali
  * Author URI:  https://github.com/Ali7Ali
- * Version:     1.0.2
+ * Version:     1.0.3
  * Text Domain: alpha-price-table-for-elementor
  * Domain Path: /languages
  * License: GPLv3
  * 
- * WC tested up to: 7.5.1
- * Elementor tested up to: 3.12.0
- * Elementor Pro tested up to: 3.12.0
+ * Elementor tested up to: 3.14.1
  * 
  * @package alpha-price-table-for-elementor
  */
@@ -39,7 +38,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-define('ALPHAPRICETABLE_VERSION', '1.0.2');
+define('ALPHAPRICETABLE_VERSION', '1.0.3');
 define('ALPHAPRICETABLE_ADDONS_PL_ROOT', __FILE__);
 define('ALPHAPRICETABLE_PL_URL', plugins_url('/', ALPHAPRICETABLE_ADDONS_PL_ROOT));
 define('ALPHAPRICETABLE_PL_PATH', plugin_dir_path(ALPHAPRICETABLE_ADDONS_PL_ROOT));

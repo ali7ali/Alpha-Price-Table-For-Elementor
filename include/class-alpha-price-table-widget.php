@@ -82,6 +82,20 @@ class Alpha_Price_Table_Widget extends Widget_Base
         );
 
         $this->add_control(
+            'check_demo',
+            [
+                'type' => Controls_Manager::RAW_HTML,
+                'raw' => sprintf(
+                    /* translators: 1: Demo link open tag, 2: Link close tag. */
+                    esc_html__('Check this widget demo %1$shere%2$s.', 'alpha-price-table-for-elementor'),
+                    '<a href="https://alphatrio.net/alpha-price-table-for-elementor/" target="_blank">',
+                    '</a>'
+                ),
+                'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
+            ]
+        );
+
+        $this->add_control(
             'heading',
             [
                 'label' => __('Title', 'alpha-price-table-for-elementor'),
@@ -185,6 +199,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
                     '{{WRAPPER}} {{CURRENT_ITEM}} i' => 'color: {{VALUE}}',
                     '{{WRAPPER}} {{CURRENT_ITEM}} svg' => 'fill: {{VALUE}}',
                 ],
+                'default' => '#4BD700',
             ]
         );
 
@@ -286,6 +301,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
                 'selectors' => [
                     '{{WRAPPER}} .elementor-price-table__header' => 'background-color: {{VALUE}}',
                 ],
+                'default' => '#121212',
             ]
         );
 
@@ -390,6 +406,20 @@ class Alpha_Price_Table_Widget extends Widget_Base
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
                     '{{WRAPPER}} .elementor-price-table__features-list' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+                'default' => [
+                    'top' => 25,
+                    'right' => 0,
+                    'bottom' => 0,
+                    'left' => 0,
+                    'unit' => 'px',
+                    'isLinked' => false,
+                ],
+                'placeholder' => [
+                    'top' => 25,
+                    'right' => 0,
+                    'bottom' => 0,
+                    'left' => 0,
                 ],
             ]
         );
@@ -555,6 +585,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
                 'condition' => [
                     'button_text!' => '',
                 ],
+                'default' => '#121212',
             ]
         );
 
@@ -680,12 +711,41 @@ class Alpha_Price_Table_Widget extends Widget_Base
             ]
         );
 
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'product_border',
+                'selector' => '{{WRAPPER}} .elementor-price-table',
+                'separator' => 'before',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'pricetable_border_radius',
+            [
+                'label' => __('Border Radius', 'alpha-price-table-for-elementor'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'default' => [
+                    'top' => 0,
+                    'right' => 0,
+                    'bottom' => 0,
+                    'left' => 0,
+                    'unit' => 'px',
+                    'isLinked' => 'true',
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-price-table' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
         $this->add_control(
             'alpha_pricetable_overflow',
             [
                 'label' => __('Overflow', 'alpha-price-table-for-elementor'),
                 'type' => Controls_Manager::SELECT,
-                'default' => 'hidden',
+                'default' => 'Hidden',
                 'options' => [
                     'hidden' => __('Hidden', 'alpha-price-table-for-elementor'),
                     'visible' => __('Visible', 'alpha-price-table-for-elementor'),
