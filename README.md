@@ -15,15 +15,15 @@ Author: ali7ali
 
 Contributors: ali7ali
 
-Tags: price-table, drag-and-drop, elementor, page builder, landing page, premium, price, compare, table, alpha
+Tags: price-table, price, elementor, compare, table
 
 Requires at least: 6.0
 
-Tested up to: 6.4
+Tested up to: 6.6
 
-Requires PHP: 7.3
+Requires PHP: 7.4
 
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 
 License: GPLv3
 
@@ -58,12 +58,12 @@ Use the WordPress.org forums for community support. If you spot a bug, you can o
 = Minimum Requirements =
 
 - WordPress 6.0 or greater
-- PHP version 7.3 or greater
+- PHP version 7.4 or greater
 - MySQL version 5.0 or greater
 
 = We recommend your host supports: =
 
-- PHP version 7.4 or greater
+- PHP version 8.1 or greater
 - MySQL version 5.6 or greater
 - WordPress Memory limit of 64 MB or greater (128 MB or higher is preferred)
 
@@ -86,5 +86,5 @@ Manual or using sFTP install:
 
 == Upgrade Notice ==
 
-= 1.0.4 =
-Compatibility for WP 6.3.
+= 1.0.5 =
+Compatibility for WP 6.6 and refactor the integration with Elementor.

@@ -6,13 +6,12 @@
  * Description: Premium Price Table for WordPress.
  * Author:      Ali Ali
  * Author URI:  https://github.com/Ali7Ali
- * Version:     1.0.4
+ * Version:     1.0.5
  * Text Domain: alpha-price-table-for-elementor
  * Domain Path: /languages
  * License: GPLv3
  * 
  * 
- * @package alpha-price-table-for-elementor
  */
 
 /*
@@ -37,13 +36,22 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-define('ALPHAPRICETABLE_VERSION', '1.0.4');
+define('ALPHAPRICETABLE_VERSION', '1.0.5');
 define('ALPHAPRICETABLE_ADDONS_PL_ROOT', __FILE__);
 define('ALPHAPRICETABLE_PL_URL', plugins_url('/', ALPHAPRICETABLE_ADDONS_PL_ROOT));
 define('ALPHAPRICETABLE_PL_PATH', plugin_dir_path(ALPHAPRICETABLE_ADDONS_PL_ROOT));
 define('ALPHAPRICETABLE_PL_ASSETS', trailingslashit(ALPHAPRICETABLE_PL_URL . 'assets'));
 define('ALPHAPRICETABLE_PL_INCLUDE', trailingslashit(ALPHAPRICETABLE_PL_PATH . 'include'));
+define('ALPHAPRICETABLE_PL_LANGUAGES', trailingslashit(ALPHAPRICETABLE_PL_PATH . 'languages'));
 define('ALPHAPRICETABLE_PLUGIN_BASE', plugin_basename(ALPHAPRICETABLE_ADDONS_PL_ROOT));
 
-// Required File
-include(ALPHAPRICETABLE_PL_INCLUDE . '/class-alpha-price-table.php');
+function alpha_price_table_addon()
+{
+
+    // Load plugin file
+    require_once(ALPHAPRICETABLE_PL_INCLUDE . '/class-alpha-price-table.php');
+
+    // Run the plugin
+    \Elementor_Alpha_Price_Table_Addon\Alpha_Price_Table_For_Elementor::instance();
+}
+add_action('plugins_loaded', 'alpha_price_table_addon');

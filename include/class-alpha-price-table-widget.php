@@ -1,26 +1,27 @@
 <?php
 
-/**
- * Alpha Price Table Widget.
- *
- * @package alpha-price-table-for-elementor
- *  */
-
-namespace Elementor;
-
-// Elementor Classes.
-use Elementor\Controls_Manager;
-use Elementor\Group_Control_Border;
-use Elementor\Group_Control_Typography;
-use Elementor\Icons_Manager;
-use Elementor\Repeater;
-use Elementor\Core\Schemes\Color;
-use Elementor\Core\Schemes\Typography;
-use Elementor\Widget_Base;
+namespace Elementor_Alpha_Price_Table_Addon;
 
 if (!defined('ABSPATH')) {
     exit; // If this file is called directly, abort.
 }
+
+/**
+ * Alpha Price Table Widget.
+ *
+ *  */
+
+// Elementor Classes.
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Repeater;
+use Elementor\Core\Schemes\Color;
+use Elementor\Core\Schemes\Typography;
+use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Typography;
+use Elementor\Icons_Manager;
+
 
 /**
  * Class Alpha_Price_Table_Widget
