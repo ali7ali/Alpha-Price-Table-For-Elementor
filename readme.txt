@@ -5,7 +5,7 @@ Tags: price-table, price, elementor, compare, table
 Requires at least: 6.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,7 +22,7 @@ Plugin features
 Elementor Website  Builder comes with an exclusive toolset, that lets you create a truly responsive website in a whole new and visual way. From different font sizes, padding, and margin per device, to reverse column ordering, this is the most powerful mobile site builder for creating perfect responsive websites.
 
 = Demo =
-Check this widget demo here [here](https://alphatrio.net/alpha-price-table-for-elementor/).
+Check this widget demo here [here](https://ali-ali.org/project/alpha-price-table-for-elementor/).
 
 = Contributing and reporting bugs =
 
@@ -64,5 +64,5 @@ Manual or using sFTP install:
 
 == Upgrade Notice ==
 
-= 1.0.5 =
-Compatibility for WP 6.6 and refactor the integration with Elementor.
+= 1.0.6 =
+Security enhancements and code refactoring
