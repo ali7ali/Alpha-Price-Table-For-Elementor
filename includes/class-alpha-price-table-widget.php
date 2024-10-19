@@ -795,15 +795,23 @@ class Alpha_Price_Table_Widget extends Widget_Base
         $this->add_inline_editing_attributes('button_text');
 
         $migration_allowed = Icons_Manager::is_migration_allowed();
+
+        $allowed_tags = [
+            'h2' => [],
+            'h3' => [],
+            'h4' => [],
+            'h5' => [],
+            'h6' => [],
+        ];
 ?>
 
         <div class="elementor-price-table">
             <?php if ($settings['heading'] || $settings['sub_heading']) : ?>
                 <div class="elementor-price-table__header">
                     <?php if (! empty($settings['heading'])) : ?>
-                        <<?php echo esc_attr($settings['heading_tag']); ?> <?php echo wp_kses_post($this->get_render_attribute_string('heading')); ?>>
+                        <<?php echo wp_kses($settings['heading_tag'], $allowed_tags); ?> <?php echo wp_kses_post($this->get_render_attribute_string('heading')); ?>>
                             <?php echo wp_kses_post($settings['heading']); ?>
-                        </<?php echo esc_attr($settings['heading_tag']); ?>>
+                        </<?php echo wp_kses($settings['heading_tag'], $allowed_tags); ?>>
                     <?php endif; ?>
 
                     <?php if (! empty($settings['sub_heading'])) : ?>
