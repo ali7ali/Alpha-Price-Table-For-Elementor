@@ -1,8 +1,7 @@
 <?php
+// Prevent direct access to this file.
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
 
-/**
- * Direct access security.
- *
- *  */
-
-wp_die();
+// Silence is golden.

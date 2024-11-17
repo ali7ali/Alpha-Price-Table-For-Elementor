@@ -3,16 +3,10 @@
 namespace Elementor_Alpha_Price_Table_Addon;
 
 if (!defined('ABSPATH')) {
-    exit; // If this file is called directly, abort.
+    exit; // Prevent direct access.
 }
 
-/**
- * Alpha Price Table Widget.
- *
- *  */
-
 // Elementor Classes.
-
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Repeater;
@@ -26,12 +20,12 @@ use Elementor\Icons_Manager;
 /**
  * Class Alpha_Price_Table_Widget
  *
- * @package Elementor
+ * Defines the Alpha Price Table widget for Elementor.
  */
 class Alpha_Price_Table_Widget extends Widget_Base
 {
     /**
-     * Id of the widget.
+     * Retrieve widget name.
      *
      * @return string
      */
@@ -41,9 +35,9 @@ class Alpha_Price_Table_Widget extends Widget_Base
     }
 
     /**
-     * Widget title.
+     * Retrieve widget title.
      *
-     * @return string|void
+     * @return string
      */
     public function get_title()
     {
@@ -51,7 +45,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
     }
 
     /**
-     * Widget Icon.
+     * Retrieve widget icon.
      *
      * @return string
      */
@@ -61,20 +55,23 @@ class Alpha_Price_Table_Widget extends Widget_Base
     }
 
     /**
-     * Widget keywords.
+     * Retrieve widget keywords.
      *
      * @return array
      */
     public function get_keywords()
     {
-        return array('pricing', 'table', 'product', 'image', 'plan', 'button');
+        return ['pricing', 'table', 'plan', 'button'];
     }
 
     /**
      * Register widget controls.
+     *
+     * @return void
      */
     protected function register_controls()
     {
+        // Header Section
         $this->start_controls_section(
             'section_header',
             [
@@ -158,6 +155,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
 
         $this->end_controls_section();
 
+        // Features Section
         $this->start_controls_section(
             'section_features',
             [
@@ -248,6 +246,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
 
         $this->end_controls_section();
 
+        // Footer Section
         $this->start_controls_section(
             'section_footer',
             [
@@ -761,7 +760,9 @@ class Alpha_Price_Table_Widget extends Widget_Base
     }
 
     /**
-     * Render the widget on the frontend.
+     * Render the widget output on the frontend.
+     *
+     * @return void
      */
     protected function render()
     {
@@ -795,21 +796,15 @@ class Alpha_Price_Table_Widget extends Widget_Base
         $this->add_inline_editing_attributes('button_text');
 
         $migration_allowed = Icons_Manager::is_migration_allowed();
-
-        // Define an allow-list for heading tags
-        $allowed_tags = ['h2', 'h3', 'h4', 'h5', 'h6'];
-
-        // Check if the provided tag is in the allow-list, default to 'h2' if not
-        $heading_tag = in_array($settings['heading_tag'], $allowed_tags) ? $settings['heading_tag'] : 'h2';
 ?>
 
         <div class="elementor-price-table">
             <?php if ($settings['heading'] || $settings['sub_heading']) : ?>
                 <div class="elementor-price-table__header">
                     <?php if (! empty($settings['heading'])) : ?>
-                        <<?php echo esc_attr($heading_tag); ?> <?php echo wp_kses_post($this->get_render_attribute_string('heading')); ?>>
+                        <<?php echo esc_attr($settings['heading_tag']); ?> <?php echo wp_kses_post($this->get_render_attribute_string('heading')); ?>>
                             <?php echo wp_kses_post($settings['heading']); ?>
-                        </<?php echo esc_attr($heading_tag); ?>>
+                        </<?php echo esc_attr($settings['heading_tag']); ?>>
                     <?php endif; ?>
 
                     <?php if (! empty($settings['sub_heading'])) : ?>

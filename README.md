@@ -1,90 +1,86 @@
 # Alpha Price Table For Elementor
 
-[![WP](https://img.shields.io/badge/WordPress-%E2%86%92-lightgrey.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![WordPress](https://img.shields.io/badge/WordPress-%E2%86%92-lightgrey.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
 [![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
 [![WordPress Plugin Last Updated](https://img.shields.io/wordpress/plugin/last-updated/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![WordPress Plugin Required PHP Version](https://img.shields.io/wordpress/plugin/required-php/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![WordPress Plugin: Required WP Version](https://img.shields.io/wordpress/plugin/wp-version/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![WordPress Plugin: Tested WP Version](https://img.shields.io/wordpress/plugin/tested/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![WordPress Plugin Rating](https://img.shields.io/wordpress/plugin/stars/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![WordPress Plugin Version](https://img.shields.io/wordpress/plugin/v/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Required PHP Version](https://img.shields.io/wordpress/plugin/required-php/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Required WP Version](https://img.shields.io/wordpress/plugin/wp-version/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Tested WP Version](https://img.shields.io/wordpress/plugin/tested/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Plugin Rating](https://img.shields.io/wordpress/plugin/stars/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Plugin Version](https://img.shields.io/wordpress/plugin/v/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
 
-=== Alpha Price Table For Elementor ===
+Alpha Price Table For Elementor is a highly customizable and feature-rich plugin that adds advanced price table widgets to Elementor, allowing you to create visually stunning pricing tables.
 
-Author: ali7ali
+---
 
-Contributors: ali7ali
+## Description
 
-Tags: price-table, price, elementor, compare, table
+Alpha Price Table For Elementor provides an easy way to create responsive, customizable, and modern price tables for your WordPress website. It seamlessly integrates with the Elementor Website Builder, ensuring a smooth user experience and powerful live editing capabilities.
 
-Requires at least: 6.0
+### Key Features:
 
-Tested up to: 6.6
+- Fully customizable pricing tables
+- Icon support (before or after text)
+- Responsive design with live editing
+- Seamless integration with Elementor
 
-Requires PHP: 7.4
+With Elementor’s intuitive tools and our advanced widget, building beautiful and mobile-friendly price tables is easier than ever.
 
-Stable tag: 1.0.6
+---
 
-License: GPLv3
+## Demo
 
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+See the plugin in action! Check the [demo here](https://ali-ali.org/project/alpha-price-table-for-elementor/).
 
-Alpha Price Table For Elementor is a plugin that offers premium price table features for WordPress.
+---
 
-== Description ==
-This plugin offers the ability to add a highly customized price table with extended features.
+## Contributing and Reporting Issues
 
-Plugin features
+We welcome your contributions to the project. You can:
 
-- Highly customized
-- Custom icon before or after the text
-- Responsive Live Editing
+- Submit bug reports or feature requests on GitHub: [GitHub Repository](https://github.com/ali7ali/Alpha-Price-Table-For-Elementor).
+- Fork the repository and create pull requests for code improvements.
 
-Elementor Website Builder comes with an exclusive toolset, that lets you create a truly responsive website in a whole new and visual way. From different font sizes, padding, and margin per device, to reverse column ordering, this is the most powerful mobile site builder for creating perfect responsive websites.
+---
 
-= Demo =
-Check this widget demo here [here](https://ali-ali.org/project/alpha-price-table-for-elementor/).
+## Support
 
-= Contributing and reporting bugs =
+For community support, visit the [WordPress.org forums](https://wordpress.org/support/plugin/alpha-price-table-for-elementor/). To report issues or suggest enhancements, submit them on [GitHub Issues](https://github.com/ali7ali/Alpha-Price-Table-For-Elementor/issues/new/choose).
 
-You can contribute code to this plugin via GitHub: [https://github.com/ali7ali/Alpha-Price-Table-For-Elementor](https://github.com/ali7ali/Alpha-Price-Table-For-Elementor)
+---
 
-= Support =
+## Installation
 
-Use the WordPress.org forums for community support. If you spot a bug, you can of course log it on [Github](https://github.com/ali7ali/Alpha-Price-Table-For-Elementor/issues/new/choose) instead where we can act upon it more efficiently.
+### Minimum Requirements
 
-== Installation ==
+- **WordPress**: 6.0 or greater
+- **PHP**: 7.4 or greater
+- **MySQL**: 5.0 or greater
 
-= Minimum Requirements =
+### Recommended Configuration
 
-- WordPress 6.0 or greater
-- PHP version 7.4 or greater
-- MySQL version 5.0 or greater
+- **PHP**: 8.1 or greater
+- **MySQL**: 5.6 or greater
+- **WordPress Memory Limit**: 128 MB or greater
 
-= We recommend your host supports: =
+### Installation Steps
 
-- PHP version 8.1 or greater
-- MySQL version 5.6 or greater
-- WordPress Memory limit of 64 MB or greater (128 MB or higher is preferred)
+1. Install the [Elementor Website Builder](https://wordpress.org/plugins/elementor/) plugin if you haven’t already.
+2. From your WordPress Dashboard:
+   - Go to **Plugins** > **Add New**.
+   - Search for **Alpha Price Table For Elementor**.
+   - Click **Install Now** and then **Activate**.
+3. Alternatively, upload the plugin manually:
+   - Download the plugin and upload the extracted folder to `/wp-content/plugins/` via FTP.
+   - Go to **Plugins** in WordPress and activate it.
 
-= Installation =
+---
 
-First, make sure you have [Elementor Website Builder](https://wordpress.org/plugins/elementor/) plugin installed and activated.
+## Upgrade Notice
 
-Then follow these steps to install the plugin:
+### Version 1.0.7
 
-1. Log in to the WordPress Dashboard as an administrator.
-2. Click the Plugins | Add New button.
-3. Search for 'Alpha Price Table For Elementor' in the Search plugins field.
-4. Once you see the plugin listed, click the Install Now button.
-5. Click the Activate button to activate the plugin.
-
-Manual or using sFTP install:
-
-1.  Manually or using sFTP Upload 'plugin-directory' to the '/wp-content/plugins/' directory
-2.  Activate the plugin through the 'Plugins' screen in WordPress
-
-== Upgrade Notice ==
-
-= 1.0.6 =
-Security enhancements and code refactoring
+- Added support for Elementor's latest version
+- Enhanced PHP 8.1 compatibility
+- Improved performance and security
+- Bug fixes and code optimizations

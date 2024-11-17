@@ -1,68 +1,60 @@
 === Alpha Price Table For Elementor ===
 Author: ali7ali
 Contributors: ali7ali
-Tags: price-table, price, elementor, compare, table
+Tags: price-table, price, elementor, comparison, table
 Requires at least: 6.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Alpha Price Table For Elementor is a plugin that offers premium price table features for WordPress.
+Alpha Price Table For Elementor is a powerful plugin offering premium and customizable price table features for WordPress.
 
 == Description ==
-This plugin offers the ability to add a highly customized price table with extended features.
+Alpha Price Table For Elementor allows you to create highly customizable and responsive price tables with advanced features. With an intuitive live editing experience and seamless Elementor integration, it's the perfect solution for building beautiful pricing tables for any website.
 
-Plugin features 
- * Highly customized
- * Custom icon before or after the text
- * Responsive Live Editing
+= Features =
+* Fully customizable price tables
+* Support for custom icons before or after text
+* Responsive design with live editing
+* Seamless integration with Elementor Website Builder
 
-Elementor Website  Builder comes with an exclusive toolset, that lets you create a truly responsive website in a whole new and visual way. From different font sizes, padding, and margin per device, to reverse column ordering, this is the most powerful mobile site builder for creating perfect responsive websites.
+= Why Choose Alpha Price Table? =
+With Elementor’s exclusive toolset and our advanced pricing table widget, you can create stunning, mobile-friendly price tables effortlessly. Control font sizes, padding, margins, and even column ordering for a perfect responsive design.
 
 = Demo =
-Check this widget demo here [here](https://ali-ali.org/project/alpha-price-table-for-elementor/).
+Check out the widget demo [here](https://ali-ali.org/project/alpha-price-table-for-elementor/).
 
-= Contributing and reporting bugs =
-
-You can contribute code to this plugin via GitHub: [https://github.com/ali7ali/Alpha-Price-Table-For-Elementor](https://github.com/ali7ali/Alpha-Price-Table-For-Elementor)
+= Contributions and Bug Reporting =
+We welcome contributions to this plugin. Report bugs or submit code on GitHub: [Alpha Price Table GitHub Repository](https://github.com/ali7ali/Alpha-Price-Table-For-Elementor).
 
 = Support =
-
-Use the WordPress.org forums for community support. If you spot a bug, you can of course log it on [Github](https://github.com/ali7ali/Alpha-Price-Table-For-Elementor/issues/new/choose) instead where we can act upon it more efficiently.
+For community support, visit the WordPress.org forums. For efficient issue resolution, report bugs on GitHub: [Report an Issue](https://github.com/ali7ali/Alpha-Price-Table-For-Elementor/issues/new/choose).
 
 == Installation == 
 
 = Minimum Requirements =
-	
 * WordPress 6.0 or greater
 * PHP version 7.4 or greater
 * MySQL version 5.0 or greater
 
-= We recommend your host supports: =
-
+= Recommended Server Configuration =
 * PHP version 8.1 or greater
 * MySQL version 5.6 or greater
-* WordPress Memory limit of 64 MB or greater (128 MB or higher is preferred)
+* WordPress memory limit of 128 MB or higher
 
-= Installation =
-
-First, make sure you have [Elementor Website Builder](https://wordpress.org/plugins/elementor/) plugin installed and activated.
-
-Then follow these steps to install the plugin:
-
-1. Log in to the WordPress Dashboard as an administrator.
-2. Click the Plugins | Add New button.
-3. Search for 'Alpha Price Table For Elementor' in the Search plugins field.
-4. Once you see the plugin listed, click the Install Now button.
-5. Click the Activate button to activate the plugin.
-
-Manual or using sFTP install:
- 1. Manually or using sFTP Upload 'plugin-directory' to the '/wp-content/plugins/' directory 
- 2. Activate the plugin through the 'Plugins' screen in WordPress 
+= Installation Steps =
+1. Ensure you have the [Elementor Website Builder](https://wordpress.org/plugins/elementor/) plugin installed and activated.
+2. Navigate to the WordPress Dashboard and click "Plugins" > "Add New."
+3. Search for "Alpha Price Table For Elementor."
+4. Click "Install Now" and then "Activate."
+5. Alternatively, upload the plugin manually via FTP to `/wp-content/plugins/` and activate it through the "Plugins" screen.
 
 == Upgrade Notice ==
 
-= 1.0.6 =
-Security enhancements and code refactoring
+= 1.0.7 =
+- Added support for Elementor's latest version
+- Enhanced PHP 8.1 compatibility
+- Improved performance and security
+- Bug fixes and code optimizations
