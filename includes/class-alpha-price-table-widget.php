@@ -10,8 +10,8 @@ if (!defined('ABSPATH')) {
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Repeater;
-use Elementor\Core\Schemes\Color;
-use Elementor\Core\Schemes\Typography;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Typography;
 use Elementor\Icons_Manager;
@@ -294,9 +294,8 @@ class Alpha_Price_Table_Widget extends Widget_Base
             [
                 'label' => esc_html__('Background Color', 'alpha-price-table-for-elementor'),
                 'type' => Controls_Manager::COLOR,
-                'scheme' => [
-                    'type' => Color::get_type(),
-                    'value' => Color::COLOR_2,
+                'global' => [
+                    'default' => Global_Colors::COLOR_SECONDARY,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .elementor-price-table__header' => 'background-color: {{VALUE}}',
@@ -342,7 +341,9 @@ class Alpha_Price_Table_Widget extends Widget_Base
             [
                 'name' => 'heading_typography',
                 'selector' => '{{WRAPPER}} .elementor-price-table__heading',
-                'scheme' => Typography::TYPOGRAPHY_1,
+                'global' => [
+                    'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+                ],
             ]
         );
 
@@ -371,7 +372,9 @@ class Alpha_Price_Table_Widget extends Widget_Base
             [
                 'name' => 'sub_heading_typography',
                 'selector' => '{{WRAPPER}} .elementor-price-table__subheading',
-                'scheme' => Typography::TYPOGRAPHY_2,
+                'global' => [
+                    'default' => Global_Typography::TYPOGRAPHY_SECONDARY,
+                ],
             ]
         );
 
@@ -429,9 +432,8 @@ class Alpha_Price_Table_Widget extends Widget_Base
             [
                 'label' => esc_html__('Color', 'alpha-price-table-for-elementor'),
                 'type' => Controls_Manager::COLOR,
-                'scheme' => [
-                    'type' => Color::get_type(),
-                    'value' => Color::COLOR_3,
+                'global' => [
+                    'default' => Global_Colors::COLOR_TEXT,
                 ],
                 'separator' => 'before',
                 'selectors' => [
@@ -445,7 +447,9 @@ class Alpha_Price_Table_Widget extends Widget_Base
             [
                 'name' => 'features_list_typography',
                 'selector' => '{{WRAPPER}} .elementor-price-table__features-list li',
-                'scheme' => Typography::TYPOGRAPHY_3,
+                'global' => [
+                    'default' => Global_Typography::TYPOGRAPHY_TEXT,
+                ],
             ]
         );
 
@@ -562,7 +566,9 @@ class Alpha_Price_Table_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'button_typography',
-                'scheme' => Typography::TYPOGRAPHY_4,
+                'global' => [
+                    'default' => Global_Typography::TYPOGRAPHY_ACCENT,
+                ],
                 'selector' => '{{WRAPPER}} .elementor-price-table__button',
                 'condition' => [
                     'button_text!' => '',
@@ -575,9 +581,8 @@ class Alpha_Price_Table_Widget extends Widget_Base
             [
                 'label' => esc_html__('Background Color', 'alpha-price-table-for-elementor'),
                 'type' => Controls_Manager::COLOR,
-                'scheme' => [
-                    'type' => Color::get_type(),
-                    'value' => Color::COLOR_4,
+                'global' => [
+                    'default' => Global_Colors::COLOR_ACCENT,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .elementor-price-table__button' => 'background-color: {{VALUE}};',
@@ -771,12 +776,14 @@ class Alpha_Price_Table_Widget extends Widget_Base
         // Escape button size
         $button_size = isset($settings['button_size']) ? esc_attr($settings['button_size']) : 'md';
 
-        $this->add_render_attribute('button_text', 'class', [
+        $this->add_render_attribute(
+            'button_text', 'class', [
             'elementor-price-table__button',
             'elementor-button',
             'cta-bt',
             'elementor-size-' . $button_size,
-        ]);
+            ]
+        );
 
         if (! empty($settings['link']['url'])) {
             $this->add_link_attributes('button_text', $settings['link']);
@@ -796,7 +803,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
         $this->add_inline_editing_attributes('button_text');
 
         $migration_allowed = Icons_Manager::is_migration_allowed();
-?>
+        ?>
 
         <div class="elementor-price-table">
             <?php if ($settings['heading'] || $settings['sub_heading']) : ?>
@@ -831,7 +838,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
 
                         // Sanitize the item ID for class attribute
                         $item_id = isset($item['_id']) ? sanitize_html_class($item['_id']) : '';
-                    ?>
+                        ?>
                         <li class="elementor-repeater-item-<?php echo esc_attr($item_id); ?>">
                             <div class="elementor-price-table__feature-inner">
                                 <?php
@@ -842,7 +849,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
                                         Icons_Manager::render_icon($item['selected_item_icon'], ['aria-hidden' => 'true']);
                                     else : ?>
                                         <i class="<?php echo esc_attr($item['item_icon']); ?>" aria-hidden="true"></i>
-                                    <?php
+                                        <?php
                                     endif;
                                 endif;
                                 if (! empty($item['item_text'])) : ?>
@@ -858,7 +865,7 @@ class Alpha_Price_Table_Widget extends Widget_Base
                                         Icons_Manager::render_icon($item['selected_item_icon'], ['aria-hidden' => 'true']);
                                     else : ?>
                                         <i class="<?php echo esc_attr($item['item_icon']); ?>" aria-hidden="true"></i>
-                                <?php
+                                        <?php
                                     endif;
                                 endif;
                                 ?>
@@ -885,6 +892,6 @@ class Alpha_Price_Table_Widget extends Widget_Base
             <?php endif; ?>
         </div>
 
-<?php
+        <?php
     }
 }

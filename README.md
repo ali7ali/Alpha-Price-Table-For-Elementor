@@ -78,9 +78,6 @@ For community support, visit the [WordPress.org forums](https://wordpress.org/su
 
 ## Upgrade Notice
 
-### Version 1.0.7
+### Version 1.0.8
 
-- Added support for Elementor's latest version
-- Enhanced PHP 8.1 compatibility
-- Improved performance and security
-- Bug fixes and code optimizations
+- Compatibility for the updated Elementor colors and typography schema.
