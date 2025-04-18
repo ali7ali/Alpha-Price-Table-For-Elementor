@@ -78,6 +78,6 @@ For community support, visit the [WordPress.org forums](https://wordpress.org/su
 
 ## Upgrade Notice
 
-### Version 1.0.8
+### Version 1.1
 
-- Compatibility for the updated Elementor colors and typography schema.
+- Compatibility for WP 6.8
