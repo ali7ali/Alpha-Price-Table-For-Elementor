@@ -24,7 +24,7 @@ Alpha Price Table For Elementor provides an easy way to create responsive, custo
 - Responsive design with live editing
 - Seamless integration with Elementor
 
-With Elementor’s intuitive tools and our advanced widget, building beautiful and mobile-friendly price tables is easier than ever.
+With Elementor's intuitive tools and our advanced widget, building beautiful and mobile-friendly price tables is easier than ever.
 
 ---
 
@@ -53,7 +53,7 @@ For community support, visit the [WordPress.org forums](https://wordpress.org/su
 
 ### Minimum Requirements
 
-- **WordPress**: 6.0 or greater
+- **WordPress**: 6.4 or greater
 - **PHP**: 7.4 or greater
 - **MySQL**: 5.0 or greater
 
@@ -65,7 +65,7 @@ For community support, visit the [WordPress.org forums](https://wordpress.org/su
 
 ### Installation Steps
 
-1. Install the [Elementor Website Builder](https://wordpress.org/plugins/elementor/) plugin if you haven’t already.
+1. Install the [Elementor Website Builder](https://wordpress.org/plugins/elementor/) plugin if you haven't already.
 2. From your WordPress Dashboard:
    - Go to **Plugins** > **Add New**.
    - Search for **Alpha Price Table For Elementor**.
@@ -78,6 +78,22 @@ For community support, visit the [WordPress.org forums](https://wordpress.org/su
 
 ## Upgrade Notice
 
+### Version 1.2.0
+
+- Requires WordPress 6.4+ and PHP 7.4+; Elementor 3.22+ recommended. Styles now load only when the widget is present, and translation loading is handled by WordPress.org.
+
 ### Version 1.1
 
+- Compatibility for WP 6.8
+
+## Changelog
+
+### 1.2.0
+- Tested with WordPress 6.9 and Elementor 3.22.
+- Minimum requirements set to WP 6.4 and PHP 7.4.
+- CSS now registers per widget (with cache-busting) instead of loading globally.
+- Removed manual text domain loading (handled by WordPress.org) and tightened external link security.
+- Added focus-visible and RTL support for improved accessibility.
+
+### 1.1
 - Compatibility for WP 6.8

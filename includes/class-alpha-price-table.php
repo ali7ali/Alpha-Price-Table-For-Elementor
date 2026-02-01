@@ -27,7 +27,15 @@ final class Alpha_Price_Table_For_Elementor {
 	 * @since 1.0.0
 	 * @var   string Minimum Elementor version required to run the addon.
 	 */
-	const MINIMUM_ELEMENTOR_VERSION = '3.21.0';
+	const MINIMUM_ELEMENTOR_VERSION = '3.22.0';
+
+	/**
+	 * Minimum WordPress Version
+	 *
+	 * @since 1.2.0
+	 * @var   string Minimum WordPress version required to run the addon.
+	 */
+	const MINIMUM_WP_VERSION = '6.4';
 
 	/**
 	 * Minimum PHP Version
@@ -86,6 +94,12 @@ final class Alpha_Price_Table_For_Elementor {
 	 * @return bool True if compatible, false otherwise.
 	 */
 	private function is_compatible(): bool {
+		// Check for required WordPress version.
+		if ( version_compare( get_bloginfo( 'version' ), self::MINIMUM_WP_VERSION, '<' ) ) {
+			add_action( 'admin_notices', array( $this, 'admin_notice_minimum_wp_version' ) );
+			return false;
+		}
+
 		// Check for required Elementor version.
 		if ( ! defined( 'ELEMENTOR_VERSION' ) || ! version_compare( ELEMENTOR_VERSION, self::MINIMUM_ELEMENTOR_VERSION, '>=' ) ) {
 			add_action( 'admin_notices', array( $this, 'admin_notice_minimum_elementor_version' ) );
@@ -110,7 +124,7 @@ final class Alpha_Price_Table_For_Elementor {
 	 * @access public
 	 */
 	public function init(): void {
-		add_action( 'elementor/frontend/after_enqueue_styles', array( $this, 'frontend_styles' ) );
+		add_action( 'elementor/frontend/after_register_styles', array( $this, 'register_frontend_assets' ) );
 		add_action( 'elementor/widgets/register', array( $this, 'register_widgets' ) );
 	}
 
@@ -158,6 +172,38 @@ final class Alpha_Price_Table_For_Elementor {
 		);
 	}
 
+	/**
+	 * Displays an admin notice if the WordPress version is below the required minimum.
+	 *
+	 * @since 1.2.0
+	 * @access public
+	 */
+	public function admin_notice_minimum_wp_version(): void {
+		if ( ! current_user_can( 'update_core' ) ) {
+			return;
+		}
+
+		$message = sprintf(
+		/* translators: 1: Plugin name, 2: Required WordPress version */
+			__( '%1$s requires WordPress version %2$s or greater.', 'alpha-price-table-for-elementor' ),
+			'<strong>' . __( 'Alpha Price Table for Elementor', 'alpha-price-table-for-elementor' ) . '</strong>',
+			self::MINIMUM_WP_VERSION
+		);
+
+		$allowed_html = array(
+			'strong' => array(),
+			'p'      => array(),
+			'div'    => array(
+				'class' => array(),
+			),
+		);
+
+		printf(
+			'<div class="notice notice-warning is-dismissible">%s</div>',
+			wp_kses( '<p>' . $message . '</p>', $allowed_html )
+		);
+	}
+
 
 	/**
 	 * Displays an admin notice if the PHP version is below the required minimum.
@@ -193,17 +239,18 @@ final class Alpha_Price_Table_For_Elementor {
 
 
 	/**
-	 * Enqueues the necessary CSS files for the widget.
+	 * Registers the necessary CSS files for the widget.
 	 *
 	 * @since  1.0.0
+	 * @since  1.2.0 Now registers and versions the stylesheet instead of enqueuing globally.
 	 * @access public
 	 */
-	public function frontend_styles(): void {
-		wp_enqueue_style(
+	public function register_frontend_assets(): void {
+		wp_register_style(
 			'alpha-pricetable-widget',
 			ALPHAPRICETABLE_ASSETS_URL . 'css/alpha-pricetable-widget.css',
 			array(),
-			ALPHAPRICETABLE_VERSION
+			$this->get_asset_version( ALPHAPRICETABLE_PLUGIN_PATH . 'assets/css/alpha-pricetable-widget.css' )
 		);
 	}
 
@@ -217,5 +264,26 @@ final class Alpha_Price_Table_For_Elementor {
 	public function register_widgets( \Elementor\Widgets_Manager $widgets_manager ): void {
 		include_once ALPHAPRICETABLE_INCLUDES_PATH . 'class-alpha-price-table-widget.php';
 		$widgets_manager->register( new Alpha_Price_Table_Widget() );
+	}
+
+	/**
+	 * Generate an asset version using file modification time for cache busting.
+	 *
+	 * Falls back to the plugin version constant if the file does not exist.
+	 *
+	 * @since 1.2.0
+	 *
+	 * @param string $file_path Absolute path to the asset file.
+	 * @return string
+	 */
+	private function get_asset_version( string $file_path ): string {
+		if ( file_exists( $file_path ) ) {
+			$mtime = filemtime( $file_path );
+			if ( false !== $mtime ) {
+				return (string) $mtime;
+			}
+		}
+
+		return ALPHAPRICETABLE_VERSION;
 	}
 }

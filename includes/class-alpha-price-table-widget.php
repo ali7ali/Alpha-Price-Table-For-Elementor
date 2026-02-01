@@ -66,6 +66,17 @@ class Alpha_Price_Table_Widget extends Widget_Base {
 	}
 
 	/**
+	 * Retrieve widget styles dependencies.
+	 *
+	 * Ensures CSS is loaded only when the widget renders.
+	 *
+	 * @return array
+	 */
+	public function get_style_depends() {
+		return array( 'alpha-pricetable-widget' );
+	}
+
+	/**
 	 * Register widget controls.
 	 *
 	 * @return void
@@ -788,6 +799,11 @@ class Alpha_Price_Table_Widget extends Widget_Base {
 
 		if ( ! empty( $settings['link']['url'] ) ) {
 			$this->add_link_attributes( 'button_text', $settings['link'] );
+
+			// Harden external links for security.
+			if ( ! empty( $settings['link']['is_external'] ) ) {
+				$this->add_render_attribute( 'button_text', 'rel', 'noopener noreferrer' );
+			}
 		}
 
 		if ( ! empty( $settings['button_hover_animation'] ) ) {

@@ -3,11 +3,14 @@
  * Plugin Name: Alpha Price Table For Elementor
  * Plugin URI:  https://ali-ali.org/
  * Description: Premium Price Table for WordPress.
- * Version:     1.1
+ * Version:     1.2.0
  * Author:      Ali Ali
  * Author URI:  https://github.com/Ali7Ali
  * Text Domain: alpha-price-table-for-elementor
  * Domain Path: /languages
+ * Requires at least: 6.4
+ * Tested up to: 6.9
+ * Requires PHP: 7.4
  * License:     GPLv3
  *
  * @package    AlphaPriceTable
@@ -33,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'ALPHAPRICETABLE_VERSION', '1.1' );
+define( 'ALPHAPRICETABLE_VERSION', '1.2.0' );
 define( 'ALPHAPRICETABLE_PLUGIN_FILE', __FILE__ );
 define( 'ALPHAPRICETABLE_PLUGIN_URL', plugin_dir_url( ALPHAPRICETABLE_PLUGIN_FILE ) );
 define( 'ALPHAPRICETABLE_PLUGIN_PATH', plugin_dir_path( ALPHAPRICETABLE_PLUGIN_FILE ) );
@@ -49,15 +52,17 @@ define( 'ALPHAPRICETABLE_PLUGIN_BASENAME', plugin_basename( ALPHAPRICETABLE_PLUG
  *
  * @since 1.0.6
  */
-function alpha_price_table_addon_init() {
+/**
+ * Initialize the Alpha Price Table plugin.
+ *
+ * @since 1.0.6
+ */
+function alpha_price_table_for_elementor_init() {
 	// Check if Elementor is installed and activated.
 	if ( ! did_action( 'elementor/loaded' ) ) {
-		add_action( 'admin_notices', 'alpha_price_table_missing_elementor_notice' );
+		add_action( 'admin_notices', 'alpha_price_table_for_elementor_missing_elementor_notice' );
 		return;
 	}
-
-	// Load plugin text domain for translations.
-	load_plugin_textdomain( 'alpha-price-table-for-elementor', false, ALPHAPRICETABLE_PLUGIN_BASENAME . '/languages' );
 
 	// Include the main plugin class.
 	include_once ALPHAPRICETABLE_INCLUDES_PATH . 'class-alpha-price-table.php';
@@ -65,7 +70,14 @@ function alpha_price_table_addon_init() {
 	// Initialize the plugin.
 	\Elementor_Alpha_Price_Table_Addon\Alpha_Price_Table_For_Elementor::instance();
 }
-add_action( 'plugins_loaded', 'alpha_price_table_addon_init' );
+add_action( 'plugins_loaded', 'alpha_price_table_for_elementor_init' );
+
+// Back-compat for legacy hook names.
+if ( ! function_exists( 'alpha_price_table_addon_init' ) ) {
+	function alpha_price_table_addon_init() {
+		alpha_price_table_for_elementor_init();
+	}
+}
 
 
 
@@ -74,7 +86,7 @@ add_action( 'plugins_loaded', 'alpha_price_table_addon_init' );
  *
  * @since 1.0.6
  */
-function alpha_price_table_missing_elementor_notice() {
+function alpha_price_table_for_elementor_missing_elementor_notice() {
 	if ( ! current_user_can( 'activate_plugins' ) ) {
 		return;
 	}
@@ -128,4 +140,11 @@ function alpha_price_table_missing_elementor_notice() {
 		'<div class="notice notice-warning is-dismissible">%s</div>',
 		wp_kses( '<p>' . $message . '</p>', $allowed_html )
 	);
+}
+
+// Back-compat for legacy hook names.
+if ( ! function_exists( 'alpha_price_table_missing_elementor_notice' ) ) {
+	function alpha_price_table_missing_elementor_notice() {
+		alpha_price_table_for_elementor_missing_elementor_notice();
+	}
 }

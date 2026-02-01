@@ -1,22 +1,22 @@
-# Copyright (C) 2025 Ali Ali
+# Copyright (C) 2026 Ali Ali
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Alpha Price Table For Elementor 1.1\n"
+"Project-Id-Version: Alpha Price Table For Elementor 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/alpha-price-table-for-elementor\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-17T10:50:32+00:00\n"
+"POT-Creation-Date: 2026-02-01T07:37:18+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: alpha-price-table-for-elementor\n"
 
 #. Plugin Name of the plugin
 #: alpha-price-table-for-elementor.php
-#: alpha-price-table-for-elementor.php:104
+#: alpha-price-table-for-elementor.php:116
 msgid "Alpha Price Table For Elementor"
 msgstr ""
 
@@ -40,21 +40,21 @@ msgstr ""
 msgid "https://github.com/Ali7Ali"
 msgstr ""
 
-#: alpha-price-table-for-elementor.php:90
+#: alpha-price-table-for-elementor.php:102
 msgid "Activate Elementor Now"
 msgstr ""
 
 #. translators: %1$s: Plugin name, %2$s: Action link
-#: alpha-price-table-for-elementor.php:92
+#: alpha-price-table-for-elementor.php:104
 msgid "%1$s requires Elementor to be activated. %2$s"
 msgstr ""
 
-#: alpha-price-table-for-elementor.php:98
+#: alpha-price-table-for-elementor.php:110
 msgid "Install Elementor Now"
 msgstr ""
 
 #. translators: %1$s: Plugin name, %2$s: Action link
-#: alpha-price-table-for-elementor.php:100
+#: alpha-price-table-for-elementor.php:112
 msgid "%1$s requires Elementor to be installed and activated. %2$s"
 msgstr ""
 
@@ -62,236 +62,242 @@ msgstr ""
 msgid "Alpha Price Table"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:78
-#: includes/class-alpha-price-table-widget.php:286
+#: includes/class-alpha-price-table-widget.php:89
+#: includes/class-alpha-price-table-widget.php:297
 msgid "Header"
 msgstr ""
 
 #. translators: 1: Demo link open tag, 2: Link close tag.
-#: includes/class-alpha-price-table-widget.php:88
+#: includes/class-alpha-price-table-widget.php:99
 msgid "Check this widget demo %1$shere%2$s."
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:99
-#: includes/class-alpha-price-table-widget.php:322
+#: includes/class-alpha-price-table-widget.php:110
+#: includes/class-alpha-price-table-widget.php:333
 msgid "Title"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:101
+#: includes/class-alpha-price-table-widget.php:112
 msgid "Enter your title"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:108
+#: includes/class-alpha-price-table-widget.php:119
 msgid "Alignment"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:113
+#: includes/class-alpha-price-table-widget.php:124
 msgid "Left"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:117
+#: includes/class-alpha-price-table-widget.php:128
 msgid "Center"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:121
+#: includes/class-alpha-price-table-widget.php:132
 msgid "Right"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:134
+#: includes/class-alpha-price-table-widget.php:145
 msgid "Description"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:136
+#: includes/class-alpha-price-table-widget.php:147
 msgid "Enter your description"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:143
+#: includes/class-alpha-price-table-widget.php:154
 msgid "Heading Tag"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:162
-#: includes/class-alpha-price-table-widget.php:386
+#: includes/class-alpha-price-table-widget.php:173
+#: includes/class-alpha-price-table-widget.php:397
 msgid "Features"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:171
+#: includes/class-alpha-price-table-widget.php:182
 msgid "Text"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:173
+#: includes/class-alpha-price-table-widget.php:184
 msgid "List Item"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:185
+#: includes/class-alpha-price-table-widget.php:196
 msgid "Icon"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:195
+#: includes/class-alpha-price-table-widget.php:206
 msgid "Icon Color"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:208
+#: includes/class-alpha-price-table-widget.php:219
 msgid "Icon Position"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:212
+#: includes/class-alpha-price-table-widget.php:223
 msgid "Before"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:213
+#: includes/class-alpha-price-table-widget.php:224
 msgid "After"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:228
+#: includes/class-alpha-price-table-widget.php:239
 msgid "List Item #1"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:233
+#: includes/class-alpha-price-table-widget.php:244
 msgid "List Item #2"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:238
+#: includes/class-alpha-price-table-widget.php:249
 msgid "List Item #3"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:253
-#: includes/class-alpha-price-table-widget.php:478
+#: includes/class-alpha-price-table-widget.php:264
+#: includes/class-alpha-price-table-widget.php:489
 msgid "Footer"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:260
+#: includes/class-alpha-price-table-widget.php:271
 msgid "Button Text"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:262
+#: includes/class-alpha-price-table-widget.php:273
 msgid "Click Here"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:269
+#: includes/class-alpha-price-table-widget.php:280
 msgid "Link"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:271
+#: includes/class-alpha-price-table-widget.php:282
 msgid "https://your-link.com"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:295
-#: includes/class-alpha-price-table-widget.php:395
-#: includes/class-alpha-price-table-widget.php:487
-#: includes/class-alpha-price-table-widget.php:582
-#: includes/class-alpha-price-table-widget.php:668
+#: includes/class-alpha-price-table-widget.php:306
+#: includes/class-alpha-price-table-widget.php:406
+#: includes/class-alpha-price-table-widget.php:498
+#: includes/class-alpha-price-table-widget.php:593
+#: includes/class-alpha-price-table-widget.php:679
 msgid "Background Color"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:310
-#: includes/class-alpha-price-table-widget.php:407
-#: includes/class-alpha-price-table-widget.php:498
+#: includes/class-alpha-price-table-widget.php:321
+#: includes/class-alpha-price-table-widget.php:418
+#: includes/class-alpha-price-table-widget.php:509
 msgid "Padding"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:331
-#: includes/class-alpha-price-table-widget.php:362
-#: includes/class-alpha-price-table-widget.php:433
+#: includes/class-alpha-price-table-widget.php:342
+#: includes/class-alpha-price-table-widget.php:373
+#: includes/class-alpha-price-table-widget.php:444
 msgid "Color"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:353
+#: includes/class-alpha-price-table-widget.php:364
 msgid "Sub Title"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:459
+#: includes/class-alpha-price-table-widget.php:470
 msgid "Width"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:510
+#: includes/class-alpha-price-table-widget.php:521
 msgid "Button"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:522
+#: includes/class-alpha-price-table-widget.php:533
 msgid "Size"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:526
+#: includes/class-alpha-price-table-widget.php:537
 msgid "Extra Small"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:527
+#: includes/class-alpha-price-table-widget.php:538
 msgid "Small"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:528
+#: includes/class-alpha-price-table-widget.php:539
 msgid "Medium"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:529
+#: includes/class-alpha-price-table-widget.php:540
 msgid "Large"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:530
+#: includes/class-alpha-price-table-widget.php:541
 msgid "Extra Large"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:543
+#: includes/class-alpha-price-table-widget.php:554
 msgid "Normal"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:553
-#: includes/class-alpha-price-table-widget.php:654
+#: includes/class-alpha-price-table-widget.php:564
+#: includes/class-alpha-price-table-widget.php:665
 msgid "Text Color"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:612
-#: includes/class-alpha-price-table-widget.php:731
+#: includes/class-alpha-price-table-widget.php:623
+#: includes/class-alpha-price-table-widget.php:742
 msgid "Border Radius"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:627
+#: includes/class-alpha-price-table-widget.php:638
 msgid "Text Padding"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:644
+#: includes/class-alpha-price-table-widget.php:655
 msgid "Hover"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:682
+#: includes/class-alpha-price-table-widget.php:693
 msgid "Border Color"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:696
+#: includes/class-alpha-price-table-widget.php:707
 msgid "Animation"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:713
+#: includes/class-alpha-price-table-widget.php:724
 msgid "Table"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:751
+#: includes/class-alpha-price-table-widget.php:762
 msgid "Overflow"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:755
+#: includes/class-alpha-price-table-widget.php:766
 msgid "Hidden"
 msgstr ""
 
-#: includes/class-alpha-price-table-widget.php:756
+#: includes/class-alpha-price-table-widget.php:767
 msgid "Visible"
 msgstr ""
 
 #. translators: 1: Plugin name, 2: Required Elementor version
-#: includes/class-alpha-price-table.php:132
+#: includes/class-alpha-price-table.php:146
 msgid "%1$s requires Elementor version %2$s or greater."
 msgstr ""
 
-#: includes/class-alpha-price-table.php:133
-#: includes/class-alpha-price-table.php:176
+#: includes/class-alpha-price-table.php:147
+#: includes/class-alpha-price-table.php:189
+#: includes/class-alpha-price-table.php:222
 msgid "Alpha Price Table for Elementor"
 msgstr ""
 
-#: includes/class-alpha-price-table.php:140
+#: includes/class-alpha-price-table.php:154
 msgid "Update Elementor"
 msgstr ""
 
+#. translators: 1: Plugin name, 2: Required WordPress version
+#: includes/class-alpha-price-table.php:188
+msgid "%1$s requires WordPress version %2$s or greater."
+msgstr ""
+
 #. translators: 1: Plugin name, 2: Required PHP version
-#: includes/class-alpha-price-table.php:175
+#: includes/class-alpha-price-table.php:221
 msgid "%1$s requires PHP version %2$s or greater."
 msgstr ""

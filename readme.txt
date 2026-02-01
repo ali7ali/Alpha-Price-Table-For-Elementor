@@ -2,10 +2,10 @@
 Author: ali7ali
 Contributors: ali7ali
 Tags: price-table, price, elementor, comparison, table
-Requires at least: 6.0
-Tested up to: 6.8
+Requires at least: 6.4
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.1
+Stable tag: 1.2.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,7 +21,7 @@ Alpha Price Table For Elementor allows you to create highly customizable and res
 * Seamless integration with Elementor Website Builder
 
 = Why Choose Alpha Price Table? =
-With Elementor’s exclusive toolset and our advanced pricing table widget, you can create stunning, mobile-friendly price tables effortlessly. Control font sizes, padding, margins, and even column ordering for a perfect responsive design.
+With Elementor's exclusive toolset and our advanced pricing table widget, you can create stunning, mobile-friendly price tables effortlessly. Control font sizes, padding, margins, and even column ordering for a perfect responsive design.
 
 = Demo =
 Check out the widget demo [here](https://ali-ali.org/project/alpha-price-table-for-elementor/).
@@ -35,7 +35,7 @@ For community support, visit the WordPress.org forums. For efficient issue resol
 == Installation == 
 
 = Minimum Requirements =
-* WordPress 6.0 or greater
+* WordPress 6.4 or greater
 * PHP version 7.4 or greater
 * MySQL version 5.0 or greater
 
@@ -53,5 +53,20 @@ For community support, visit the WordPress.org forums. For efficient issue resol
 
 == Upgrade Notice ==
 
+= 1.2.0 =
+- Requires WordPress 6.4+ and PHP 7.4+; Elementor 3.22+ recommended. Styles now load only when the widget is present, and translations rely on WordPress.org auto-loading.
+
 = 1.1 =
 - Compatibility for WP 6.8
+
+== Changelog ==
+
+= 1.2.0 =
+* Tested with WordPress 6.9 and Elementor 3.22.
+* Minimum requirements set to WP 6.4 and PHP 7.4.
+* CSS now registers per widget (with cache-busting) instead of loading globally.
+* Removed manual text domain loading (handled by WordPress.org) and tightened external link security.
+* Added focus-visible and RTL support for improved accessibility.
+
+= 1.1 =
+* Compatibility for WP 6.8
