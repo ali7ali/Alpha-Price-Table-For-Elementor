@@ -78,6 +78,10 @@ For community support, visit the [WordPress.org forums](https://wordpress.org/su
 
 ## Upgrade Notice
 
+### Version 1.3.0
+
+- Compatibility for WordPress 7.0 and Elementor 4.x.
+
 ### Version 1.2.0
 
 - Requires WordPress 6.4+ and PHP 7.4+; Elementor 3.22+ recommended. Styles now load only when the widget is present, and translation loading is handled by WordPress.org.
@@ -87,6 +91,10 @@ For community support, visit the [WordPress.org forums](https://wordpress.org/su
 - Compatibility for WP 6.8
 
 ## Changelog
+
+### 1.3.0 - 2026-06-15
+- Compatibility for WordPress 7.0.
+- Compatibility for Elementor 4.x.
 
 ### 1.2.0
 - Tested with WordPress 6.9 and Elementor 3.22.
