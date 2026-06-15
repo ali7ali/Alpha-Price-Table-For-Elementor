@@ -72,14 +72,6 @@ function alpha_price_table_for_elementor_init() {
 }
 add_action( 'plugins_loaded', 'alpha_price_table_for_elementor_init' );
 
-// Back-compat for legacy hook names.
-if ( ! function_exists( 'alpha_price_table_addon_init' ) ) {
-	function alpha_price_table_addon_init() {
-		alpha_price_table_for_elementor_init();
-	}
-}
-
-
 
 /**
  * Display an admin notice if Elementor is not installed or activated.
@@ -140,11 +132,4 @@ function alpha_price_table_for_elementor_missing_elementor_notice() {
 		'<div class="notice notice-warning is-dismissible">%s</div>',
 		wp_kses( '<p>' . $message . '</p>', $allowed_html )
 	);
-}
-
-// Back-compat for legacy hook names.
-if ( ! function_exists( 'alpha_price_table_missing_elementor_notice' ) ) {
-	function alpha_price_table_missing_elementor_notice() {
-		alpha_price_table_for_elementor_missing_elementor_notice();
-	}
 }

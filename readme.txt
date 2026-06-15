@@ -64,6 +64,9 @@ For community support, visit the WordPress.org forums. For efficient issue resol
 = 1.3.0 - 2026-06-15 =
 * Compatibility for WordPress 7.0.
 * Compatibility for Elementor 4.x.
+* Added _content_template() for Elementor editor live preview.
+* Removed legacy back-compat function shims.
+* Added .editorconfig and .gitignore.
 
 = 1.2.0 =
 * Tested with WordPress 6.9 and Elementor 3.22.

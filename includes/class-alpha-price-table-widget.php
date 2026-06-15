@@ -776,6 +776,93 @@ class Alpha_Price_Table_Widget extends Widget_Base {
 	}
 
 	/**
+	 * Render the widget output in the Elementor editor (live preview).
+	 *
+	 * @return void
+	 */
+	protected function content_template() {
+		?>
+		<#
+		var buttonSize = settings.button_size || 'md';
+
+		view.addRenderAttribute( 'heading', 'class', 'elementor-price-table__heading' );
+		view.addRenderAttribute( 'sub_heading', 'class', 'elementor-price-table__subheading' );
+		view.addInlineEditingAttributes( 'heading', 'none' );
+		view.addInlineEditingAttributes( 'sub_heading', 'none' );
+		#>
+		<div class="elementor-price-table">
+			<# if ( settings.heading || settings.sub_heading ) { #>
+				<div class="elementor-price-table__header">
+					<# if ( settings.heading ) { #>
+						<{{ settings.heading_tag }} {{{ view.getRenderAttributeString( 'heading' ) }}}>{{{ settings.heading }}}</{{ settings.heading_tag }}>
+					<# } #>
+					<# if ( settings.sub_heading ) { #>
+						<span {{{ view.getRenderAttributeString( 'sub_heading' ) }}}>{{{ settings.sub_heading }}}</span>
+					<# } #>
+				</div>
+			<# } #>
+
+			<# if ( settings.features_list ) { #>
+				<ul class="elementor-price-table__features-list">
+					<# _.each( settings.features_list, function( item, index ) {
+						var itemKey = 'features_list_' + index;
+						view.addInlineEditingAttributes( itemKey );
+
+						var iconHTML = elementor.helpers.renderIcon( view, item.selected_item_icon, { 'aria-hidden': true }, 'i', 'object' );
+						var isNew = ! item.item_icon;
+						var migrated = elementor.helpers.isIconMigrated( item, 'selected_item_icon' );
+						#>
+						<li class="elementor-repeater-item-{{ item._id }}">
+							<div class="elementor-price-table__feature-inner">
+								<# if ( ( item.item_icon || item.selected_item_icon.value ) && 'before' === item.item_icon_position ) { #>
+									<# if ( iconHTML && iconHTML.rendered && ( ! item.item_icon || migrated ) ) { #>
+										{{{ iconHTML.value }}}
+									<# } else { #>
+										<i class="{{ item.item_icon }}" aria-hidden="true"></i>
+									<# } #>
+								<# } #>
+
+								<span {{{ view.getRenderAttributeString( itemKey ) }}}>{{{ item.item_text }}}</span>
+
+								<# if ( ( item.item_icon || item.selected_item_icon.value ) && 'after' === item.item_icon_position ) { #>
+									<# if ( iconHTML && iconHTML.rendered && ( ! item.item_icon || migrated ) ) { #>
+										{{{ iconHTML.value }}}
+									<# } else { #>
+										<i class="{{ item.item_icon }}" aria-hidden="true"></i>
+									<# } #>
+								<# } #>
+							</div>
+						</li>
+					<# } ); #>
+				</ul>
+			<# } #>
+
+			<# if ( settings.button_text || settings.footer_additional_info ) { #>
+				<div class="elementor-price-table__footer">
+					<# if ( settings.button_text ) { #>
+						<#
+						var buttonClasses = 'elementor-price-table__button elementor-button cta-bt elementor-size-' + buttonSize;
+						if ( settings.button_hover_animation ) {
+							buttonClasses += ' elementor-animation-' + settings.button_hover_animation;
+						}
+						view.addRenderAttribute( 'button_text', 'class', buttonClasses );
+						if ( settings.link && settings.link.url ) {
+							view.addRenderAttribute( 'button_text', 'href', settings.link.url );
+						}
+						view.addInlineEditingAttributes( 'button_text' );
+						#>
+						<a {{{ view.getRenderAttributeString( 'button_text' ) }}}>{{{ settings.button_text }}}</a>
+					<# } #>
+					<# if ( settings.footer_additional_info ) { #>
+						<div {{{ view.getRenderAttributeString( 'footer_additional_info' ) }}}>{{{ settings.footer_additional_info }}}</div>
+					<# } #>
+				</div>
+			<# } #>
+		</div>
+		<?php
+	}
+
+	/**
 	 * Render the widget output on the frontend.
 	 *
 	 * @return void
