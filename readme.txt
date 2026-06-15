@@ -68,7 +68,7 @@ For community support, visit the WordPress.org forums. For efficient issue resol
 * Removed legacy back-compat function shims.
 * Added .editorconfig and .gitignore.
 * Added editor preview styles.
-* Added PHPCS GitHub Actions workflow.
+* Added PHPCS and POT generation GitHub Actions workflows.
 
 = 1.2.0 =
 * Tested with WordPress 6.9 and Elementor 3.22.
