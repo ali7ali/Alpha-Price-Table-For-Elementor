@@ -24,7 +24,6 @@ final class Alpha_Price_Table_For_Elementor {
 	/**
 	 * Minimum Elementor Version
 	 *
-	 * @since 1.0.0
 	 * @var   string Minimum Elementor version required to run the addon.
 	 */
 	const MINIMUM_ELEMENTOR_VERSION = '3.22.0';
@@ -40,7 +39,6 @@ final class Alpha_Price_Table_For_Elementor {
 	/**
 	 * Minimum PHP Version
 	 *
-	 * @since 1.0.0
 	 * @var   string Minimum PHP version required to run the addon.
 	 */
 	const MINIMUM_PHP_VERSION = '7.4';
@@ -48,35 +46,26 @@ final class Alpha_Price_Table_For_Elementor {
 	/**
 	 * Instance
 	 *
-	 * @since  1.0.0
-	 * @access private
-	 * @static
 	 * @var    Alpha_Price_Table_For_Elementor|null The single instance of the class.
 	 */
-	private static ?Alpha_Price_Table_For_Elementor $_instance = null;
+	private static ?Alpha_Price_Table_For_Elementor $instance = null;
 
 	/**
 	 * Ensures only one instance of the class is loaded or can be loaded.
 	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @static
 	 * @return Alpha_Price_Table_For_Elementor An instance of the class.
 	 */
 	public static function instance(): Alpha_Price_Table_For_Elementor {
-		if ( is_null( self::$_instance ) ) {
-			self::$_instance = new self();
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
 		}
-		return self::$_instance;
+		return self::$instance;
 	}
 
 	/**
 	 * Constructor
 	 *
 	 * Perform compatibility checks and initialize functionality if all checks pass.
-	 *
-	 * @since  1.0.0
-	 * @access private
 	 */
 	private function __construct() {
 		if ( $this->is_compatible() ) {
@@ -89,8 +78,6 @@ final class Alpha_Price_Table_For_Elementor {
 	 *
 	 * Verifies the site meets the addon's requirements.
 	 *
-	 * @since  1.0.0
-	 * @access private
 	 * @return bool True if compatible, false otherwise.
 	 */
 	private function is_compatible(): bool {
@@ -119,9 +106,6 @@ final class Alpha_Price_Table_For_Elementor {
 	 * Initialize the plugin.
 	 *
 	 * Loads translations, enqueues styles, and registers widgets.
-	 *
-	 * @since  1.0.0
-	 * @access public
 	 */
 	public function init(): void {
 		add_action( 'elementor/frontend/after_register_styles', array( $this, 'register_frontend_assets' ) );
@@ -131,9 +115,6 @@ final class Alpha_Price_Table_For_Elementor {
 
 	/**
 	 * Displays an admin notice if the Elementor version is below the required minimum.
-	 *
-	 * @since  1.0.0
-	 * @access public
 	 */
 	public function admin_notice_minimum_elementor_version(): void {
 		if ( ! current_user_can( 'update_plugins' ) ) {
@@ -177,7 +158,6 @@ final class Alpha_Price_Table_For_Elementor {
 	 * Displays an admin notice if the WordPress version is below the required minimum.
 	 *
 	 * @since 1.2.0
-	 * @access public
 	 */
 	public function admin_notice_minimum_wp_version(): void {
 		if ( ! current_user_can( 'update_core' ) ) {
@@ -208,9 +188,6 @@ final class Alpha_Price_Table_For_Elementor {
 
 	/**
 	 * Displays an admin notice if the PHP version is below the required minimum.
-	 *
-	 * @since  1.0.0
-	 * @access public
 	 */
 	public function admin_notice_minimum_php_version(): void {
 		if ( ! current_user_can( 'update_core' ) ) {
@@ -254,9 +231,7 @@ final class Alpha_Price_Table_For_Elementor {
 	/**
 	 * Registers the necessary CSS files for the widget.
 	 *
-	 * @since  1.0.0
 	 * @since  1.2.0 Now registers and versions the stylesheet instead of enqueuing globally.
-	 * @access public
 	 */
 	public function register_frontend_assets(): void {
 		wp_register_style(
@@ -270,8 +245,6 @@ final class Alpha_Price_Table_For_Elementor {
 	/**
 	 * Registers the widget with Elementor.
 	 *
-	 * @since  1.0.0
-	 * @access public
 	 * @param  \Elementor\Widgets_Manager $widgets_manager Elementor widgets manager.
 	 */
 	public function register_widgets( \Elementor\Widgets_Manager $widgets_manager ): void {
