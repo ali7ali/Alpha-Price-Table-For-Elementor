@@ -3,9 +3,9 @@ Author: ali7ali
 Contributors: ali7ali
 Tags: price-table, price, elementor, comparison, table
 Requires at least: 6.4
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -60,6 +60,10 @@ For community support, visit the WordPress.org forums. For efficient issue resol
 - Compatibility for WP 6.8
 
 == Changelog ==
+
+= 1.3.0 - 2026-06-15 =
+* Compatibility for WordPress 7.0.
+* Compatibility for Elementor 4.x.
 
 = 1.2.0 =
 * Tested with WordPress 6.9 and Elementor 3.22.
