@@ -37,14 +37,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( defined( 'ALPHAPRICETABLE_PLUGIN_FILE' ) && realpath( (string) ALPHAPRICETABLE_PLUGIN_FILE ) !== realpath( __FILE__ ) ) {
-	/**
-	 * Display a notice when another copy of the plugin is already active.
-	 */
-	function alpha_price_table_for_elementor_duplicate_copy_notice(): void {
-		printf(
-			'<div class="notice notice-error"><p>%s</p></div>',
-			esc_html__( 'Alpha Price Table For Elementor is already active from another plugin folder. Deactivate and delete the old copy before activating this one, or install the update using a ZIP whose top-level folder is alpha-price-table-for-elementor.', 'alpha-price-table-for-elementor' )
-		);
+	if ( ! function_exists( 'alpha_price_table_for_elementor_duplicate_copy_notice' ) ) {
+		/**
+		 * Display a notice when another copy of the plugin is already active.
+		 */
+		function alpha_price_table_for_elementor_duplicate_copy_notice(): void {
+			printf(
+				'<div class="notice notice-error"><p>%s</p></div>',
+				esc_html__( 'Alpha Price Table For Elementor is already active from another plugin folder. Deactivate and delete the old copy before activating this one, or install the update using a ZIP whose top-level folder is alpha-price-table-for-elementor.', 'alpha-price-table-for-elementor' )
+			);
+		}
 	}
 	add_action( 'admin_notices', 'alpha_price_table_for_elementor_duplicate_copy_notice' );
 

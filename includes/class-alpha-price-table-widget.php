@@ -20,6 +20,7 @@ use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Typography;
 use Elementor\Icons_Manager;
+use Elementor\Utils;
 
 
 /**
@@ -907,16 +908,17 @@ class Alpha_Price_Table_Widget extends Widget_Base {
 		$this->add_inline_editing_attributes( 'button_text' );
 
 		$migration_allowed = Icons_Manager::is_migration_allowed();
+		$heading_tag       = Utils::validate_html_tag( $settings['heading_tag'] ?? 'h3' );
 		?>
 
 		<div class="elementor-price-table">
-			<?php if ( $settings['heading'] || $settings['sub_heading'] ) : ?>
-				<div class="elementor-price-table__header">
-					<?php if ( ! empty( $settings['heading'] ) ) : ?>
-						<<?php echo esc_attr( $settings['heading_tag'] ); ?> <?php echo wp_kses_post( $this->get_render_attribute_string( 'heading' ) ); ?>>
-							<?php echo wp_kses_post( $settings['heading'] ); ?>
-						</<?php echo esc_attr( $settings['heading_tag'] ); ?>>
-					<?php endif; ?>
+				<?php if ( $settings['heading'] || $settings['sub_heading'] ) : ?>
+					<div class="elementor-price-table__header">
+						<?php if ( ! empty( $settings['heading'] ) ) : ?>
+							<<?php echo esc_attr( $heading_tag ); ?> <?php echo wp_kses_post( $this->get_render_attribute_string( 'heading' ) ); ?>>
+								<?php echo wp_kses_post( $settings['heading'] ); ?>
+							</<?php echo esc_attr( $heading_tag ); ?>>
+						<?php endif; ?>
 
 					<?php if ( ! empty( $settings['sub_heading'] ) ) : ?>
 						<span <?php echo wp_kses_post( $this->get_render_attribute_string( 'sub_heading' ) ); ?>>
