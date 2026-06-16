@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-15T13:00:26+00:00\n"
+"POT-Creation-Date: 2026-06-16T12:55:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: alpha-price-table-for-elementor\n"
 
 #. Plugin Name of the plugin
 #: alpha-price-table-for-elementor.php
-#: alpha-price-table-for-elementor.php:108
+#: alpha-price-table-for-elementor.php:133
 msgid "Alpha Price Table For Elementor"
 msgstr ""
 
@@ -40,22 +40,31 @@ msgstr ""
 msgid "https://github.com/Ali7Ali"
 msgstr ""
 
-#: alpha-price-table-for-elementor.php:94
+#: alpha-price-table-for-elementor.php:46
+#: alpha-price-table-for-elementor.php:61
+msgid "Alpha Price Table For Elementor is already active from another plugin folder. Deactivate and delete the old copy before activating this one, or install the update using a ZIP whose top-level folder is alpha-price-table-for-elementor."
+msgstr ""
+
+#: alpha-price-table-for-elementor.php:62
+msgid "Plugin activation blocked"
+msgstr ""
+
+#: alpha-price-table-for-elementor.php:119
 msgid "Activate Elementor Now"
 msgstr ""
 
 #. translators: %1$s: Plugin name, %2$s: Action link
-#: alpha-price-table-for-elementor.php:96
+#: alpha-price-table-for-elementor.php:121
 #, php-format
 msgid "%1$s requires Elementor to be activated. %2$s"
 msgstr ""
 
-#: alpha-price-table-for-elementor.php:102
+#: alpha-price-table-for-elementor.php:127
 msgid "Install Elementor Now"
 msgstr ""
 
 #. translators: %1$s: Plugin name, %2$s: Action link
-#: alpha-price-table-for-elementor.php:104
+#: alpha-price-table-for-elementor.php:129
 #, php-format
 msgid "%1$s requires Elementor to be installed and activated. %2$s"
 msgstr ""
