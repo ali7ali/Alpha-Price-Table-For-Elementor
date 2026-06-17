@@ -67,7 +67,7 @@ For community support, visit the WordPress.org forums. For efficient issue resol
 * Added _content_template() for Elementor editor live preview.
 * Removed legacy back-compat function shims.
 * Added .editorconfig and .gitignore.
-* Added editor preview styles.
+* Removed the editor-only preview stylesheet so Elementor uses the real widget styles.
 * Added PHPCS and POT generation GitHub Actions workflows.
 
 = 1.2.0 =

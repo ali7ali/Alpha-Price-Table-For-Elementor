@@ -1,13 +1,13 @@
 # Alpha Price Table For Elementor
 
 [![WordPress](https://img.shields.io/badge/WordPress-%E2%86%92-lightgrey.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![WordPress Plugin Last Updated](https://img.shields.io/wordpress/plugin/last-updated/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![Required PHP Version](https://img.shields.io/wordpress/plugin/required-php/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![Required WP Version](https://img.shields.io/wordpress/plugin/wp-version/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![Tested WP Version](https://img.shields.io/wordpress/plugin/tested/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![Plugin Rating](https://img.shields.io/wordpress/plugin/stars/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
-[![Plugin Version](https://img.shields.io/wordpress/plugin/v/alpha-price-table-for-elementor?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/alpha-price-table-for-elementor.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![WordPress Plugin Last Updated](https://img.shields.io/wordpress/plugin/last-updated/alpha-price-table-for-elementor.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Required PHP Version](https://img.shields.io/wordpress/plugin/required-php/alpha-price-table-for-elementor.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Required WP Version](https://img.shields.io/wordpress/plugin/wp-version/alpha-price-table-for-elementor.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Tested WP Version](https://img.shields.io/wordpress/plugin/tested/alpha-price-table-for-elementor.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Plugin Rating](https://img.shields.io/wordpress/plugin/stars/alpha-price-table-for-elementor.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
+[![Plugin Version](https://img.shields.io/wordpress/plugin/v/alpha-price-table-for-elementor.svg?style=flat-square)](https://wordpress.org/plugins/alpha-price-table-for-elementor/)
 
 Alpha Price Table For Elementor is a highly customizable and feature-rich plugin that adds advanced price table widgets to Elementor, allowing you to create visually stunning pricing tables.
 
@@ -98,7 +98,7 @@ For community support, visit the [WordPress.org forums](https://wordpress.org/su
 - Added _content_template() for Elementor editor live preview.
 - Removed legacy back-compat function shims.
 - Added .editorconfig and .gitignore.
-- Added editor preview styles.
+- Removed the editor-only preview stylesheet so Elementor uses the real widget styles.
 - Added PHPCS GitHub Actions workflow.
 
 ### 1.2.0

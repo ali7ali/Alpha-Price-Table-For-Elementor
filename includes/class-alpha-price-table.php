@@ -109,7 +109,6 @@ final class Alpha_Price_Table_For_Elementor {
 	 */
 	public function init(): void {
 		add_action( 'elementor/frontend/after_register_styles', array( $this, 'register_frontend_assets' ) );
-		add_action( 'elementor/preview/enqueue_styles', array( $this, 'enqueue_editor_styles' ) );
 		add_action( 'elementor/widgets/register', array( $this, 'register_widgets' ) );
 	}
 
@@ -215,18 +214,6 @@ final class Alpha_Price_Table_For_Elementor {
 		);
 	}
 
-
-	/**
-	 * Enqueue styles for the Elementor editor preview.
-	 */
-	public function enqueue_editor_styles(): void {
-		wp_enqueue_style(
-			'alpha-pricetable-editor',
-			ALPHAPRICETABLE_ASSETS_URL . 'css/editor-preview.css',
-			array(),
-			ALPHAPRICETABLE_VERSION
-		);
-	}
 
 	/**
 	 * Registers the necessary CSS files for the widget.
